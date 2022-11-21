@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - tube1
+  - krosh
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - tube
   - Water
   - UI
   - 
