@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3615155258681553131}
   - component: {fileID: 7184932122818734138}
   - component: {fileID: 3298406511853336644}
-  - component: {fileID: -5558808951378113196}
   m_Layer: 0
   m_Name: GroundTemp
   m_TagString: Showel
@@ -98,16 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5558808951378113196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2540297572863554320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 442977acca3a33f49b7347751b4d2b38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EmptyDig: {fileID: 8919182198951919675, guid: 39d8675cc25c56a4b87175a4d23b70fb, type: 3}

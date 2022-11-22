@@ -8,6 +8,7 @@ TagManager:
   - krosh
   - Showel
   - met
+  - Hand
   layers:
   - Default
   - TransparentFX

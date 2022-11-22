@@ -5,6 +5,8 @@ using UnityEngine;
 public class slave : MonoBehaviour
 {
     public GameObject EmptyDig;
+
+    public bool isDestr;
     void Start()
     {
         
@@ -18,13 +20,25 @@ public class slave : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if(collision.gameObject.tag == "Showel")
+        if(collision.gameObject.tag == "Showel" && isDestr == true)
         {
-            Instantiate(
-                EmptyDig,
-                new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z),
-                Quaternion.identity);
+            Destroy(collision.gameObject);
         }
 
+        if(collision.gameObject.tag == "Hand")
+        {
+            isDestr = true;
+        }
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag == "Hand")
+        {
+            isDestr = false;
+        }
+    }
+
+
+
 }
