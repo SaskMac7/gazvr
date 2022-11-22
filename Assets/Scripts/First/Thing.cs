@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class Thing : MonoBehaviour
 {
+    public Renderer qq;
     private Interactable interactable;
     private SteamVR_Input_Sources hand;
 
@@ -44,11 +45,13 @@ public class Thing : MonoBehaviour
         if (hand.name == "LeftHand")
         {
             generalText.text = "Взял в левую руку";
+            qq.enabled = true;
         }
 
         if (hand.name == "RightHand")
         {
             generalText.text = "Взял в правую руку";
+            qq.enabled = true;
         }
 
         flag = true;

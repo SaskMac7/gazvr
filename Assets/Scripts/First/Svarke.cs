@@ -5,7 +5,7 @@ using UnityEngine;
 public class Svarke : MonoBehaviour
 {
     public float timer;
-    public  bool sasa;
+    public  static bool sasa;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class Svarke : MonoBehaviour
     {
         
     }
-    private void OnCollision(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         
         if(collision.gameObject.tag == "tube1")
@@ -28,5 +28,12 @@ public class Svarke : MonoBehaviour
                 sasa = true; 
             }
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        sasa = false;
+        timer = 0;
+
+       
     }
 }
