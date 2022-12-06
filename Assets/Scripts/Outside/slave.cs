@@ -5,8 +5,10 @@ using UnityEngine;
 public class slave : MonoBehaviour
 {
     public GameObject EmptyDig;
-
+    public  GameObject lopata;
+    public static GameObject dirt;
     public bool isDestr;
+    public static bool di;
     void Start()
     {
         
@@ -15,17 +17,21 @@ public class slave : MonoBehaviour
     void Update()
     {
         
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
 
-        if(collision.gameObject.tag == "Showel" && isDestr == true)
+        if(collision.gameObject.tag == "Showel" /*&& isDestr*/ )
         {
-            Destroy(collision.gameObject);
+
+            dirt = collision.gameObject;
+            di = true;
+
         }
 
-        if(collision.gameObject.tag == "Hand")
+        if(collision.gameObject.tag == "Hand" )
         {
             isDestr = true;
         }
